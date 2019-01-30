@@ -10,22 +10,22 @@ Internamente, Vue compila las plantillas a funciones de renderizado de DOM Virtu
 
 Si estas familiarizado con los conceptos del DOM Virtual y prefieres el poder de JavaScript puro, puedes también [escribir directamente funciones de renderizado](render-function.html) en lugar de plantillas, con soporte opcional para JSX.
 
-## Interpolations
+## Interpolaciones
 
-### Text
+### Texto
 
-The most basic form of data binding is text interpolation using the "Mustache" syntax (double curly braces):
+La forma más básica conectar datos es la interpolación de texto mediante la sintaxis "Mustache" (llaves dobles):
 
 ``` html
-<span>Message: {{ msg }}</span>
+<span>Mensaje: {{ msg }}</span>
 ```
 
-The mustache tag will be replaced with the value of the `msg` property on the corresponding data object. It will also be updated whenever the data object's `msg` property changes.
+El tag {{ msg }} será reemplazado con el valor de la propiedad `msg` en el objeto de datos correspondiente. Será también actualizado cada vez que la propiedad `msg` cambia.
 
-You can also perform one-time interpolations that do not update on data change by using the [v-once directive](../api/#v-once), but keep in mind this will also affect any binding on the same node:
+También se pueden realizar interpolaciones que no se actualizan la cambiar los datos usando la directiva [v-once directive](../api/#v-once), pero considerando que esto afectará cualquier conexión en el mismo nodo:
 
 ``` html
-<span v-once>This will never change: {{ msg }}</span>
+<span v-once>Esto nunca cambiará: {{ msg }}</span>
 ```
 
 ### HTML Puro
